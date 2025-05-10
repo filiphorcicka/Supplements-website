@@ -1,0 +1,855 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  background-color: #FFF5F5;
+  min-width: 320px;
+}
+
+main {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.navBar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  background-color: white;
+  align-items: center;
+  position: relative;
+}
+
+.navBar .name {
+  font-size: 1.7em;
+  font-weight: 650;
+  color: #EB5D57;
+}
+
+.hamburger {
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  color: #EB5D57;
+}
+
+.dropdownMenu {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  background-color: transparent;
+  position: static;
+  box-shadow: none;
+}
+
+.dropdownMenu li a {
+  text-decoration: none;
+  color: #EB5D57;
+  font-weight: 600;
+  padding: 10px 20px;
+  display: block;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.dropdownMenu li a:hover {
+  background-color: #FFE5E5;
+}
+
+.introduction {
+  display: flex;
+  width: 100%;
+  padding-top: 3em;
+  padding-bottom: 10em;
+  justify-content: center;
+  align-items: center;
+  gap: 6%;
+}
+
+.introduction .content {
+  width: 47%;
+  display: flex;
+  flex-direction: column;
+  justify-self: start;
+  gap: 2em;
+  padding-left: 4%;
+}
+
+.introduction .content h1 {
+  font-size: 3.5em;
+  font-weight: 600;
+  color: #EB5D57;
+}
+
+.introduction .content>p {
+  font-size: 1em;
+  line-height: 1.1em;
+}
+
+.introduction .content .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+}
+
+.introduction .content button {
+  font-size: 0.9em;
+  font-weight: 600;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.introduction .content .buttons #benefits {
+  border: #EB5D57 2px solid;
+  color: #EB5D57;
+  background-color: white;
+}
+
+.introduction .content .buttons #loading {
+  border: none;
+  background-color: #EB5D57;
+  color: white;
+
+}
+
+.introduction .img {
+  width: 47%;
+  display: flex;
+  justify-content: center;
+}
+
+.introduction .img img {
+  width: 75%;
+  position: static;
+}
+
+.introduction .img .container {
+  position: absolute;
+  top: 24em;
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.introduction .img .container>div {
+  width: 35%;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  padding: 0.7em;
+}
+
+.introduction .img .container>div .header {
+  font-size: 1.1em;
+  font-weight: 550;
+}
+
+.introduction .img .container>div .text {
+  font-size: 0.8em;
+  font-weight: 450;
+}
+
+.mainArticles {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10em;
+}
+
+.mainArticles .benefits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3em;
+}
+
+.mainArticles .benefits .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.mainArticles .benefits .title h2 {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.mainArticles .benefits .boxes {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.mainArticles .benefits .boxes .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  width: 20%;
+  height: 16em;
+  padding: 1em;
+  padding-bottom: 2%;
+}
+
+.mainArticles .benefits .boxes .box .icon {
+  background-color: #FFF5F5;
+  width: 20%;
+  padding: 4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+
+}
+
+.mainArticles .benefits .boxes .box .header {
+  font-size: 1.5em;
+  font-weight: 550;
+}
+
+.mainArticles .explanation {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2em;
+  gap: 4%;
+}
+
+.mainArticles .explanation img {
+  width: 40%;
+}
+
+.mainArticles .explanation .article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 40%;
+  padding: 2em;
+}
+
+.mainArticles .explanation .article h2 {
+  font-size: 2em;
+  font-weight: 600;
+  padding-bottom: 2em;
+}
+
+.mainArticles .explanation .article .texts {
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  gap: 0.8em;
+}
+
+.bold {
+  font-weight: 580;
+}
+
+.mainArticles .loading {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mainArticles .loading article {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  width: 45%;
+}
+
+.mainArticles .loading article .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1em;
+}
+
+.mainArticles .loading article .title h2 {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.mainArticles .loading article .texts {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.mainArticles .loading article .texts section {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.mainArticles .loading article .texts section h3 {
+  font-size: 1.5em;
+  font-weight: 580;
+  color: #EB5D57;
+}
+
+.mainArticles .loading table {
+  min-width: 40%;
+  text-align: left;
+  font-size: 1.1em;
+}
+
+.mainArticles .loading table caption {
+  font-size: 1.3em;
+  font-weight: 580;
+  padding-bottom: 2em;
+}
+
+.mainArticles .loading table thead {
+  background-color: #EB5D57;
+  color: white;
+  font-weight: 620;
+}
+
+.mainArticles .loading table tbody {
+  background-color: white;
+  font-size: 0.9em;
+}
+
+.mainArticles .loading table tbody tr {
+  border-top: 0.1px solid rgba(0, 0, 0, 0.2);
+}
+
+.mainArticles .loading table tbody tr:first-child {
+  border-top: none;
+}
+
+.mainArticles .loading table th {
+  padding: 1em;
+}
+
+.mainArticles .FAQ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+  width: 100%;
+  padding-bottom: 3%;
+}
+
+.mainArticles .FAQ .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+}
+
+.mainArticles .FAQ .title h2 {
+  font-size: 2em;
+  font-weight: 600;
+  text-align: center;
+}
+
+.mainArticles .FAQ .questions {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.mainArticles .FAQ .questions .box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.mainArticles .FAQ .questions .box .question {
+  width: 100%;
+  display: flex;
+  padding: 1em;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.mainArticles .FAQ .questions .box .question p {
+  font-size: 1em;
+  font-weight: 550;
+}
+
+.mainArticles .FAQ .questions .box .question button {
+  font-size: 1.3em;
+  font-weight: 550;
+  color: #EB5D57;
+  background-color: white;
+  border: none;
+}
+
+.mainArticles .FAQ .questions .box .answer {
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  padding-top: 0%;
+  font-size: 0.8em;
+  background-color: white;
+  text-align: center;
+  transition: max-height 0.4s ease;
+}
+
+nav.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #EB5D57;
+  color: white;
+  padding: 2em;
+  gap: 2em;
+}
+
+nav.nav h2 {
+  font-size: 2em;
+  font-weight: 600;
+}
+
+nav.nav p {
+  width: 40%;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+nav.nav .container {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav.nav .container button {
+  font-size: 1.1em;
+  text-wrap: nowrap;
+  padding: 1em;
+  border-radius: 5px;
+  border: none;
+  color: #EB5D57;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5em;
+  background-color: #2E3141;
+  color: white;
+}
+
+footer .container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10%;
+}
+
+footer .describtion {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 3em;
+}
+
+footer .describtion h3 {
+  font-size: 1.8em;
+}
+
+footer .describtion p {
+  font-size: 0.8em;
+}
+
+footer .links {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .links .navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+  justify-content: space-evenly;
+}
+
+footer .links .navigation h4 {
+  font-size: 1em;
+}
+
+footer .links .navigation .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1em;
+}
+
+footer .links .navigation .content a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+footer .links .contact {
+  display: flex;
+  flex-direction: column;
+  gap: 3em;
+}
+
+button {
+  cursor: pointer;
+  text-wrap: nowrap;
+}
+
+/*https://chat.deepseek.com/a/chat/s/93421050-b5ea-47ef-87f2-0fbb27562bd1*/
+@media (min-width: 601px) and (max-width: 1024px) {
+  .dropdownMenu {
+    gap: 15px;
+  }
+
+  .introduction {
+    padding: 3em 2em;
+    gap: 3em;
+  }
+
+  .introduction .content h1 {
+    font-size: 2.5em;
+  }
+
+  .introduction .img .container {
+    width: 50%;
+    top: 22em;
+  }
+
+  .introduction .img .container>div {
+    width: 42%;
+  }
+
+  .mainArticles {
+    gap: 5em;
+  }
+
+  .mainArticles .benefits .boxes {
+    flex-wrap: wrap;
+    gap: 2em;
+  }
+
+  .mainArticles .benefits .boxes .box {
+    width: 45%;
+  }
+
+  .mainArticles .explanation img {
+    display: none;
+  }
+
+  .mainArticles .explanation .article {
+    width: 100%;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  .mainArticles .loading {
+    flex-direction: column;
+    gap: 3em;
+  }
+
+  .mainArticles .loading article,
+  .mainArticles .loading table {
+    width: 80%;
+  }
+
+  .mainArticles .FAQ .questions {
+    width: 80%;
+  }
+
+  nav.nav .container {
+    width: 60%;
+    justify-content: space-evenly;
+  }
+
+  footer .container {
+    flex-wrap: wrap;
+  }
+
+  footer .describtion {
+    width: 45%;
+  }
+
+  footer .links {
+    width: 45%;
+  }
+}
+
+@media (max-width: 850px) {
+  .introduction .img .container {
+    top: 20em;
+  }
+
+  .introduction .img .container>div {
+    width: 42%;
+    font-size: 0.8em;
+  }
+
+  article>p {
+    text-align: center;
+  }
+
+  .mainArticles .loading {
+    flex-direction: column;
+    gap: 3em;
+  }
+
+  .mainArticles .loading article,
+  .mainArticles .loading table {
+    width: 90%;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+
+  .mainArticles .loading table {
+    margin-top: 2em;
+  }
+}
+
+@media (max-width: 600px) {
+  img {
+    width: 90%;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .dropdownMenu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .dropdownMenu.show {
+    display: flex;
+  }
+
+  .dropdownMenu li a {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .introduction {
+    flex-direction: column;
+    padding: 2em 1em;
+    gap: 3em;
+    padding-bottom: 5em;
+  }
+
+  .introduction .content {
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  .introduction .content h1 {
+    font-size: 2em;
+  }
+
+  .introduction .content .buttons {
+    flex-direction: column;
+    gap: 1em;
+    width: 100%;
+  }
+
+  .introduction .content button {
+    width: 100%;
+  }
+
+  .introduction .img {
+    width: 100%;
+    align-self: center;
+  }
+
+  .introduction .img .container {
+    display: none;
+  }
+
+  .introduction .img .container>div {
+    display: none;
+  }
+
+  .mainArticles {
+    gap: 5em;
+  }
+
+  .mainArticles .benefits .boxes {
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
+
+  .mainArticles .benefits .boxes .box {
+    width: 90%;
+    height: auto;
+    padding: 1.5em;
+    gap: 2em;
+  }
+
+  .mainArticles .explanation {
+    flex-direction: column;
+    padding: 2em 1em;
+    gap: 2em;
+  }
+
+  .mainArticles .explanation img {
+    width: 100%;
+    order: -1;
+  }
+
+  .mainArticles .explanation .article {
+    width: 100%;
+    padding: 0;
+  }
+
+  .mainArticles .loading article {
+    width: 100%;
+  }
+
+  .mainArticles .FAQ .questions {
+    width: 90%;
+  }
+
+  nav.nav p {
+    width: 90%;
+  }
+
+  nav.nav .container {
+    width: 70%;
+    gap: 1em;
+  }
+
+  footer .container {
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  footer .describtion,
+  footer .links {
+    width: 100%;
+  }
+
+  footer .links {
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .title p,
+  h2 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .introduction .img .container {
+    display: none;
+  }
+
+  .introduction .content h1 {
+    font-size: 1.8em;
+  }
+
+  nav.nav h2 {
+    font-size: 1.5em;
+  }
+
+  .mainArticles .loading table {
+    font-size: 0.9em;
+  }
+
+  .mainArticles .loading table th {
+    padding: 0.8em 0.5em;
+  }
+}
+
+/* 320px specific adjustments */
+@media (max-width: 320px) {
+  .navBar .name {
+    font-size: 1.4em;
+  }
+
+  .hamburger {
+    font-size: 24px;
+  }
+
+  .introduction .content h1 {
+    font-size: 1.6em;
+  }
+
+  .introduction .content button {
+    padding: 0.8em;
+    font-size: 0.8em;
+  }
+
+  .mainArticles .benefits .title h2,
+  .mainArticles .explanation .article h2,
+  .mainArticles .loading article .title h2,
+  .mainArticles .FAQ .title h2,
+  nav.nav h2 {
+    font-size: 1.5em;
+  }
+
+  .mainArticles .loading table {
+    width: 100%;
+    font-size: 0.8em;
+  }
+
+  .mainArticles .loading table th {
+    padding: 0.6em 0.3em;
+  }
+
+  footer {
+    padding: 1.5em;
+  }
+
+  footer .describtion h3 {
+    font-size: 1.5em;
+  }
+
+  footer .links .navigation,
+  footer .links .contact {
+    gap: 1.5em;
+  }
+}
